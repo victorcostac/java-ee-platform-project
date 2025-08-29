@@ -1,0 +1,28 @@
+# Command to run this very easy
+## docker-compose down && ./gradlew build -x test && docker build --tag senseupdevcrapps.azurecr.io/senseup.hub.admin:senseup . && docker-compose up
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: servlets-postgres
+    environment:
+      POSTGRES_DB: servlets_db
+      POSTGRES_USER: servlets_user
+      POSTGRES_PASSWORD: servlets_pass
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - devweb2
+    restart: unless-stopped
+
+networks:
+  devweb2:
+    external: false
+
+volumes:
+  postgres_data:
+    driver: local
