@@ -1,5 +1,6 @@
 package servlets.controllers;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,16 +12,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-@WebServlet("/oi")
-public class MinhaApi extends HttpServlet {
+@WebServlet("/cadastroUsuario")
+public class UsuarioController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Configurar o tipo de conteúdo
         response.setContentType("text/html;charset=UTF-8");
-        System.out.println("to aqui");
-        AplCadastrarUsuario.incluirUsuario("nome");
-        System.out.println("to aqui");
+
         PrintWriter out = response.getWriter();
 
         out.println("<!DOCTYPE html>");
@@ -53,4 +52,13 @@ public class MinhaApi extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
     }
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+        throws ServletException, IOException
+    {
+
+        
+        AplCadastrarUsuario.incluirUsuario("nome");
+    }
+
 }

@@ -28,7 +28,7 @@
         <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
         
         <!-- Mapeamento de entidades -->
-        <mapping class="servlets.model.domain.Usuario"/>
+        <mapping class="servlets.model.domain.Ator"/>
         
     </session-factory>
 </hibernate-configuration>
