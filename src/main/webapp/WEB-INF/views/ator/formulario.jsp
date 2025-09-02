@@ -42,7 +42,7 @@
         }
         
         .page-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1396a2ff 100%);
             color: white;
             padding: 1rem 0;
             margin: 2rem -15px 2rem -15px;

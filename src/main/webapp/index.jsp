@@ -42,9 +42,9 @@
         }
         
         .hero-section { 
-            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%,  #1396a2ff 100%);
             color: white;
-            padding: 4rem 2rem; 
+            padding: 1.5rem 2rem; 
             border-radius: 1rem; 
             text-align: center; 
             margin-bottom: 3rem;
@@ -293,7 +293,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="stats-item">
-                        <div class="stats-number">Java 21</div>
+                        <div class="stats-number">Java 11</div>
                         <div class="stats-label">Plataforma</div>
                     </div>
                 </div>
